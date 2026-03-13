@@ -1,0 +1,28 @@
+{
+  "name": "solo-dev-skills",
+  "owner": {
+    "name": "zouyanjian"
+  },
+  "metadata": {
+    "description": "面向软件研发全流程的 AI 技能仓库，覆盖设计、编码、审查三大阶段",
+    "version": "2.0.0"
+  },
+  "plugins": [
+    {
+      "name": "dev-skills",
+      "description": "软件研发全流程 Skills（设计、编码、审查、调试、重构）",
+      "source": "./",
+      "skills": [
+        "./skills/overall-designer",
+        "./skills/detail-designer",
+        "./skills/project-map",
+        "./skills/code-implementer",
+        "./skills/bugfix",
+        "./skills/refactorer",
+        "./skills/code-reviewer",
+        "./skills/code-verifier",
+        "./skills/commit-checker"
+      ]
+    }
+  ]
+}
