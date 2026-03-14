@@ -3,7 +3,7 @@
 ## Skill 目录结构
 
 所有 Skills 扁平排列在 `skills/` 目录下（参考 [baoyu-skills](https://github.com/JimLiu/baoyu-skills)）。
-分类通过 `.claude-plugin/marketplace.json` 管理，不使用子目录嵌套。
+通过 `.claude-plugin/plugin.json` 注册为 Plugin，Claude Code 自动发现 `skills/` 下的所有 Skill。
 
 ```
 skills/<skill-name>/
@@ -16,16 +16,9 @@ skills/<skill-name>/
 └── prompts/              # [可选] Prompt 模板
 ```
 
-## 分类（通过 marketplace.json 管理）
+## Plugin 注册
 
-| 场景 | marketplace.json 分组 |
-|------|----------------------|
-| 编码、调试、审查、重构 | `dev-skills` |
-| 产品设计、需求分析 | `product-skills` |
-| 博客、周报、文案写作 | `content-skills` |
-| 封面图、信息图、PPT | `visual-skills` |
-| 翻译、格式转换、图片处理 | `utility-skills` |
-| 部署、监控、日志分析 | `ops-skills` |
+Skill 放入 `skills/<skill-name>/` 目录后，Claude Code 会通过 `.claude-plugin/plugin.json` 的 `"skills": "./skills/"` 配置自动发现，无需手动注册路径。
 
 ## SKILL.md 模板
 
@@ -72,13 +65,9 @@ bash "$SHARED/check-method-length.sh" <files>
 Load spec: `../../specs/{spec-id}/spec.md`
 ```
 
-## 注册到 marketplace.json
+## 注册到 Plugin
 
-在 `.claude-plugin/marketplace.json` 对应分类的 `skills` 数组中添加路径：
-
-```json
-"./skills/<skill-name>"
-```
+只需将 Skill 目录放在 `skills/` 下，`plugin.json` 中 `"skills": "./skills/"` 会自动发现。无需手动添加路径。
 
 ## Checklist
 
@@ -86,5 +75,5 @@ Load spec: `../../specs/{spec-id}/spec.md`
 - [ ] description 使用第三人称
 - [ ] 正文不超过 500 行
 - [ ] 如有脚本，添加了 Script Directory 说明
-- [ ] 在 `marketplace.json` 中注册
+- [ ] Skill 目录已放在 `skills/` 下（自动注册）
 - [ ] 在 `README.md` 的 Skills 列表中添加

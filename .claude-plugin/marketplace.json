@@ -11,18 +11,7 @@
     {
       "name": "dev-skills",
       "description": "软件研发全流程 Skills（设计、编码、审查、调试、重构）",
-      "source": "./",
-      "skills": [
-        "./skills/overall-designer",
-        "./skills/detail-designer",
-        "./skills/project-map",
-        "./skills/code-implementer",
-        "./skills/bugfix",
-        "./skills/refactorer",
-        "./skills/code-reviewer",
-        "./skills/code-verifier",
-        "./skills/commit-checker"
-      ]
+      "source": "./"
     }
   ]
 }

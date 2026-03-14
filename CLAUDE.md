@@ -4,7 +4,7 @@
 
 ## Architecture
 
-Skills 扁平排列在 `skills/` 目录下，分类通过 `.claude-plugin/marketplace.json` 定义。
+Skills 扁平排列在 `skills/` 目录下，通过 `.claude-plugin/plugin.json` 注册为 Plugin，Claude Code 自动发现。
 
 当前仅包含 `dev-skills` 一个分类（9 个 Skills），覆盖设计、编码、审查三个阶段：
 

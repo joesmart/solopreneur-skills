@@ -1,0 +1,9 @@
+{
+  "name": "dev-skills",
+  "version": "2.0.0",
+  "description": "面向软件研发全流程的 AI 技能仓库，覆盖设计、编码、审查三大阶段",
+  "author": {
+    "name": "zouyanjian"
+  },
+  "skills": "./skills/"
+}

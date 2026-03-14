@@ -11,7 +11,7 @@
 
 ### Added
 - `CLAUDE.md` 项目指令文件
-- `.claude-plugin/marketplace.json` 插件市场注册
+- `.claude-plugin/plugin.json` Plugin 配置
 - `docs/creating-skills.md` Skill 编写指南
 - `scripts/validate-skills.sh` 格式校验脚本
 - 六大分类子目录骨架：`product/`、`content/`、`visual/`、`util/`、`ops/`

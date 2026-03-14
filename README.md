@@ -52,7 +52,8 @@ solopreneur-skills/
 ├── CLAUDE.md                        # 项目指令
 ├── CHANGELOG.md                     # 变更日志
 ├── .claude-plugin/
-│   └── marketplace.json             # 插件市场注册（分类在此定义）
+│   ├── marketplace.json             # Marketplace 注册表（列出可安装 plugins）
+│   └── plugin.json                  # Plugin manifest（声明 skills 等组件）
 │
 ├── skills/                          # Skills（扁平排列，每个 Skill 一个目录）
 │   ├── _shared/                     # 共享模块
@@ -88,7 +89,7 @@ solopreneur-skills/
     └── validate-skills.sh           #   Skill 格式校验
 ```
 
-> **分类管理**：Skills 目录是扁平的，分类通过 `.claude-plugin/marketplace.json` 中的 plugins 分组定义。
+> **配置架构**：`marketplace.json` 是注册表（供 `/plugin marketplace add` 发现），`plugin.json` 是 manifest（声明 `"skills": "./skills/"` 供自动发现）。
 
 ---
 
