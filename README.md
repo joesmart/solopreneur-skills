@@ -1,4 +1,4 @@
-# Code Skills — 一人软件公司 AI 技能仓库
+# Solopreneur Skills — 一人软件公司 AI 技能仓库
 
 > 覆盖产品设计、软件研发、内容创作、视觉设计、工具和运维六大场景的 Claude Code Skills。
 > 一个人 + AI = 一家软件公司。
@@ -9,20 +9,18 @@
 
 ### 方法一：Claude Code Plugin（推荐）
 
-仓库需先推送到 GitHub（如 `your-username/code-skills`），然后在 Claude Code 中执行：
-
 ```bash
 # 注册为插件市场
-/plugin marketplace add your-username/code-skills
+/plugin marketplace add joesmart/solopreneur-skills
 
 # 安装 Skills
-/plugin install dev-skills@code-skills
+/plugin install dev-skills@solopreneur-skills
 ```
 
 或者直接让 AI 帮你安装：
 
 ```
-请从 github.com/your-username/code-skills 安装 Skills
+请从 github.com/joesmart/solopreneur-skills 安装 Skills
 ```
 
 ### 方法二：符号链接（本地开发推荐）
@@ -32,17 +30,17 @@
 mkdir -p .claude/skills
 
 # 链接所有 Skills
-ln -s /path/to/code-skills/skills/* .claude/skills/
+ln -s /path/to/solopreneur-skills/skills/* .claude/skills/
 
 # 链接编码规范
-ln -s /path/to/code-skills/specs .claude/specs
+ln -s /path/to/solopreneur-skills/specs .claude/specs
 ```
 
 ### 方法三：Git Submodule
 
 ```bash
-git submodule add <repo-url> .claude/code-skills
-ln -s .claude/code-skills/skills/* .claude/skills/
+git submodule add https://github.com/joesmart/solopreneur-skills.git .claude/solopreneur-skills
+ln -s .claude/solopreneur-skills/skills/* .claude/skills/
 ```
 
 ---
@@ -50,7 +48,7 @@ ln -s .claude/code-skills/skills/* .claude/skills/
 ## 📦 目录结构
 
 ```
-code-skills/
+solopreneur-skills/
 ├── CLAUDE.md                        # 项目指令
 ├── CHANGELOG.md                     # 变更日志
 ├── .claude-plugin/
@@ -71,8 +69,7 @@ code-skills/
 │   ├── refactorer/                  # ♻️  安全代码重构
 │   ├── code-reviewer/               # 🔍  代码审查
 │   ├── code-verifier/               # ✅  代码推演验证
-│   ├── commit-checker/              # 🚦  提交前检查
-│   └── ...                          # 📌  更多 Skills（按 marketplace.json 分类）
+│   └── commit-checker/              # 🚦  提交前检查
 │
 ├── specs/                           # 通用编码规范（8 个，语言无关）
 │   ├── clean-function/spec.md       #   函数整洁
@@ -91,13 +88,13 @@ code-skills/
     └── validate-skills.sh           #   Skill 格式校验
 ```
 
-> **分类管理**：Skills 目录是扁平的（参考 [baoyu-skills](https://github.com/JimLiu/baoyu-skills)），分类通过 `.claude-plugin/marketplace.json` 中的 plugins 分组定义。
+> **分类管理**：Skills 目录是扁平的，分类通过 `.claude-plugin/marketplace.json` 中的 plugins 分组定义。
 
 ---
 
-## 🛠️ Skills 分类
+## 🛠️ Skills 一览
 
-### 💻 研发类（已就绪）
+### 💻 研发类（已就绪 · 9 个）
 
 #### 设计阶段
 
@@ -230,3 +227,9 @@ echo "STATUS: PASS/WARN/FAIL"
 ### 添加新的规范
 
 在 `specs/` 下新建目录和 `spec.md`，使用 Requirement/Scenario 格式。详见 [specs/README.md](specs/README.md)。
+
+---
+
+## 📄 License
+
+MIT
